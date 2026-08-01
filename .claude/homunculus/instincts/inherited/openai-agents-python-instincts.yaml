@@ -1,0 +1,429 @@
+# Instincts generated from https://github.com/lllyyysss77/openai-agents-python
+# Generated: 2026-08-01T04:32:28.505Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: openai-agents-python-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: docs, fix, chore
+
+## Evidence
+
+- 7 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: stabilize healthcare_support example, fix: redact direct MCP cleanup transport errors (#4078)
+
+---
+id: openai-agents-python-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Commit Length
+
+## Action
+
+Keep commit messages concise (~38 characters)
+
+## Evidence
+
+- Average commit message length: 38 chars
+- Based on 7 commits
+
+---
+id: openai-agents-python-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: openai-agents-python-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: openai-agents-python-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: openai-agents-python-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: openai-agents-python-workflow-documentation-update
+trigger: "when doing documentation update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Workflow Documentation Update
+
+## Action
+
+Follow the documentation-update workflow:
+1. Edit one or more files in docs/ and/or README.md
+2. Optionally update mkdocs.yml or other doc config
+3. Commit with 'docs:' prefix in message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/*.md, docs/**/index.md, README.md
+
+---
+id: openai-agents-python-workflow-version-bump
+trigger: "when doing version bump"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Workflow Version Bump
+
+## Action
+
+Follow the version-bump workflow:
+1. Update version in pyproject.toml
+2. Update uv.lock or other lock files
+3. Commit with 'Bump version' in message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: pyproject.toml, uv.lock
+
+---
+id: openai-agents-python-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Consistent with src/agents file names
+
+---
+id: openai-agents-python-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: openai-agents-python-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: openai-agents-python-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: openai-agents-python-instinct-import-style
+trigger: "When importing modules within the package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: openai-agents-python-instinct-export-style
+trigger: "When exporting functions or classes from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: openai-agents-python-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Test Location
+
+## Action
+
+Place test files in the separate 'tests' folder
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Presence of 'tests' folder
+
+---
+id: openai-agents-python-instinct-test-organization
+trigger: "When organizing test code"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Test Organization
+
+## Action
+
+Mirror the source folder structure within the 'tests' directory
+
+## Evidence
+
+- Pattern in architecture.folderStructure.srcLayout
+- Common practice in Python projects
+
+---
+id: openai-agents-python-instinct-commit-prefix
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Commit Prefix
+
+## Action
+
+Use a conventional commit prefix: 'docs:', 'fix:', or 'chore:' as appropriate
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Examples: 'docs: update translated pages', 'fix: redact direct MCP cleanup transport errors (#4078)'
+
+---
+id: openai-agents-python-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 38 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples in commits.examples
+
+---
+id: openai-agents-python-instinct-commit-version-bump
+trigger: "When bumping the project version"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Commit Version Bump
+
+## Action
+
+Use 'Bump version to X.Y.Z' in the commit message
+
+## Evidence
+
+- Commit example: 'Bump version to 0.19.2 (#4046)'
+
+---
+id: openai-agents-python-instinct-workflow-docs-update
+trigger: "When someone wants to update, improve, or translate documentation"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Workflow Docs Update
+
+## Action
+
+Edit docs/*.md, docs/**/index.md, README.md, optionally mkdocs.yml, then commit with 'docs:' prefix
+
+## Evidence
+
+- Workflow: documentation-update
+- Commit examples: 'docs: improve the consistency of docs'
+
+---
+id: openai-agents-python-instinct-workflow-version-bump
+trigger: "When someone wants to release a new version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/openai-agents-python
+---
+
+# Openai Agents Python Instinct Workflow Version Bump
+
+## Action
+
+Update version in pyproject.toml, update uv.lock, then commit with 'Bump version' in message
+
+## Evidence
+
+- Workflow: version-bump
+- Commit example: 'Bump version to 0.19.2 (#4046)'
+
